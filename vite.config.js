@@ -13,7 +13,7 @@ export default defineConfig({
     remotes: {
       'n5-remote-hp': 'https://n5-harry-potter.vercel.app/assets/remoteEntry.js',
       'n5-remote-rm': 'https://n5-rick-morty.vercel.app/assets/remoteEntry.js',
-      'n5-remote-commons': 'https://n5-host.vercel.app/assets/remoteEntry.js',
+      'n5-remote-commons': 'https://n5-commons.vercel.app/assets/remoteEntry.js',
     },
     shared: ['react', 'react-dom'],
   })],
