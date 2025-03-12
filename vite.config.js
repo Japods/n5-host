@@ -13,15 +13,18 @@ export default defineConfig({
     remotes: {
       'n5-remote-hp': 'https://n5-harry-potter.vercel.app/assets/remoteEntry.js',
       'n5-remote-rm': 'https://n5-rick-morty.vercel.app/assets/remoteEntry.js',
-      'n5-remote-commons': 'https://n5-commons-d7ca6q47l-japods-projects-8fe65e8c.vercel.app/assets/remoteEntry.js',
+      'n5-remote-commons': 'https://n5-host.vercel.app/assets/remoteEntry.js',
     },
     shared: ['react', 'react-dom'],
   })],
   server: {
-    cors: {
-      origin: '*', // Permite cualquier origen
-      methods: ['GET', 'POST', 'PUT', 'DELETE'], // Métodos permitidos
-      allowedHeaders: ['Content-Type', 'Authorization'],
+    cors: true, // Habilita CORS en desarrollo
+    proxy: {
+      '/assets/remoteEntry.js': {
+        target: 'https://n5-commons.vercel.app',
+        changeOrigin: true,
+        secure: false,
+      },
     },
   },
   test: {
