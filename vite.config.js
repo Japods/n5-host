@@ -11,9 +11,9 @@ export default defineConfig({
     filename: 'remoteEntry.js',
     exposes: {},
     remotes: {
-      'n5-remote-hp': 'http://localhost:5003/assets/remoteEntry.js',
-      'n5-remote-rm': 'http://localhost:5004/assets/remoteEntry.js',
-      'n5-remote-commons': 'http://localhost:5005/assets/remoteEntry.js',
+      'n5-remote-hp': 'https://n5-harry-potter.vercel.app/assets/remoteEntry.js',
+      'n5-remote-rm': 'https://n5-rick-morty.vercel.app/assets/remoteEntry.js',
+      'n5-remote-commons': 'https://n5-commons-d7ca6q47l-japods-projects-8fe65e8c.vercel.app/assets/remoteEntry.js',
     },
     shared: ['react', 'react-dom'],
   })],
